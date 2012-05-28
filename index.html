@@ -10,8 +10,9 @@
 
 	<!-- Set the viewport width to device width for mobile -->
 	<meta name="viewport" content="width=device-width" />
-
-	<title>88 Lines of Code | Home</title>
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Cabin" />
+	<link rel="shortcut icon" href="favicon.ico" />
+	<title>Coming Soon | 88 Lines of Code</title>
   
 	<!-- Included CSS Files -->
 	<link rel="stylesheet" href="static/stylesheets/foundation.css">
@@ -29,10 +30,19 @@
 	<![endif]-->
 </head>
 <body>
-  <div class="container">
+  <div id="mother" class="container">
     <div class="row">
-			<div class="twelve columns">
-        <h1>88 Lines of Code</h1>
+			<div class="six columns right">
+        <img src="static/images/logo-wide.png" />
+      </div>
+      <div class="six columns left">
+        <h3>Coming Soon</h3>
+        <p>
+          We are pretty busy here at eighty eight, but hopefully we'll have our new website up soon.
+        </p>
+        <p>
+          While you're waiting please visit our <a href="http://blog.88loc.com">blog</a>, or contact us<br /> by <a id="spam-email" href="#">e-mail</a> or phone +45 2819 1202.
+        </p>
       </div>
     </div>
   </div>
@@ -41,5 +51,10 @@
 	<script src="static/javascripts/jquery.min.js"></script>
 	<script src="static/javascripts/foundation.js"></script>
 	<script src="static/javascripts/app.js"></script>
+	<script type="text/javascript"> 
+    $(function() {
+      $("#spam-email").attr('href', 'mailto' + ':' + 'sayhello@' + '88loc.' + 'com');
+  	});
+  </script>
 </body>
 </html>
