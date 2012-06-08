@@ -68,6 +68,8 @@ footer.row a {
 
 h3#coming-soon {
   text-transform: uppercase;
+  color: #444;
+  font-size: 1.6em;
 }
 
 a {
