@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+
+	<!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width" />
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Cabin" />
+	<link rel="shortcut icon" href="favicon.ico" />
+	<title>Sad Trombone</title>
+  
+	<!-- Included CSS Files -->
+	<link rel="stylesheet" href="static/stylesheets/foundation.css">
+	<link rel="stylesheet" href="static/stylesheets/app.css">
+
+	<!--[if lt IE 9]>
+		<link rel="stylesheet" href="stylesheets/ie.css">
+	<![endif]-->
+	
+	<script src="static/javascripts/modernizr.foundation.js"></script>
+
+	<!-- IE Fix for HTML5 Tags -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<style type="text/css" media="screen">
+	  html {
+      background-color: #efefef;
+      background-position: center center;
+      background-repeat: no-repeat;
+
+      background: -webkit-gradient(radial, center center, 0, center center, 1000, from(#fff), to(#efefef));
+      background-image: -moz-radial-gradient(top, #fff, #efefef);
+      background-image: -o-radial-gradient(top, #fff, #efefef);
+
+      width: 100%;
+      height: 100%;
+    }
+    
+    body {
+      background: none;
+      text-align: center;
+    }
+    
+    a {
+    	position: relative;
+      color: rgba(255,255,255,1);
+      text-decoration: none;
+      background-color: rgba(0,116,197,1);
+      
+      font-weight: 700;
+      font-size: 2em;
+      display: block;
+      padding: 20px;
+      -webkit-border-radius: 8px;
+      -moz-border-radius: 8px;
+      border-radius: 8px;
+      -webkit-box-shadow: 0px 9px 0px rgba(0,89,151,1), 0px 9px 25px rgba(0,0,0,.7);
+      -moz-box-shadow: 0px 9px 0px rgba(0,89,151,1), 0px 9px 25px rgba(0,0,0,.7);
+      box-shadow: 0px 9px 0px rgba(0,89,151,1), 0px 9px 25px rgba(0,0,0,.7);
+      margin: 100px auto;
+    	width: 160px;
+    	text-align: center;
+
+    	-webkit-transition: all .1s ease;
+    	-moz-transition: all .1s ease;
+    	-ms-transition: all .1s ease;
+    	-o-transition: all .1s ease;
+    	transition: all .1s ease;
+    }
+    
+    a:hover {
+      color: rgba(255,255,255,1);
+    }
+
+    a:active {
+      -webkit-box-shadow: 0px 3px 0px rgba(0,75,127,1), 0px 3px 6px rgba(0,0,0,.9);
+      -moz-box-shadow: 0px 3px 0px rgba(0,75,127,1), 0px 3px 6px rgba(0,0,0,.9);
+      box-shadow: 0px 3px 0px rgba(0,75,127,1), 0px 3px 6px rgba(0,0,0,.9);
+      position: relative;
+      top: 6px;
+    }
+	</style>
+</head>
+<body>
+  <div id="mother" class="container">
+    <h1>Sad Trombone</h1>
+    <a href="#play" onclick="return playmp3('static/mp3/sad-trombone.mp3');">Play</a>
+  </div>
+  <script type="text/javascript">
+    function playmp3(url){
+      var audioElement = document.createElement('audio');
+      audioElement.setAttribute('src', url);
+      audioElement.load();
+      audioElement.addEventListener("canplay", function() {
+        audioElement.play();
+      });
+      return false;
+    }
+  </script>
+</body>
+</html>
